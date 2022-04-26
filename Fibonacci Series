@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int fib(int n)
+{
+	int F[10]={-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
+	
+	if(F[n] != -1)
+		return F[n];
+	if(n<=1)
+		F[n]=n;
+	else
+		F[n]=fib(n-1) + fib(n-2);	
+	
+	return (F[n]);
+}
+
+int main()
+{
+	int n=5;
+	cout<<fib(n);
+}
